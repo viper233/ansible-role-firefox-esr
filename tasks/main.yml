@@ -1,0 +1,18 @@
+---
+# tasks file for firefox-esr
+
+- name: Add Mozilla team ppa
+  apt-repository:
+    repo: 'ppa:mozillateam/ppa'
+    state: present
+  register: apt_repo
+
+- name: Update apt cache
+  apt:
+    update_cache: yes
+  when: apt_repo|changed
+
+- name: Install firefox-esr
+  apt:
+    name: firefox-esr
+    state: present
