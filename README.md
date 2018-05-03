@@ -1,17 +1,17 @@
 firefox-esr
 =========
 
-This role installs firefix-esr i.e. firefox 52 on Ubuntu
-
+Install firefix-esr i.e. firefox 52 on Ubuntu
 
 Example Playbook
 ----------------
 
-
+```
     - hosts: desktop
       become: true
       roles:
          - firefox-esr
+```
 
 License
 -------

@@ -10,7 +10,7 @@
 - name: Update apt cache
   apt:
     update_cache: yes
-  when: apt_repo|changed
+  when: apt_repo is changed
 
 - name: Install firefox-esr
   apt:
